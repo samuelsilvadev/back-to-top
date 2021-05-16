@@ -1,0 +1,17 @@
+{
+  "name": "back-to-top",
+  "version": "0.0.0",
+  "repository": "git@github.com:samuelsilvadev/back-to-top.git",
+  "author": "Samuel Silva <samuelsilvawb@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint 'src/**/*.js' --fix",
+    "format": "prettier --write . --loglevel=error"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.0"
+  }
+}
