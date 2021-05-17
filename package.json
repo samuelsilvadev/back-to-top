@@ -5,21 +5,29 @@
   "author": "Samuel Silva <samuelsilvawb@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint 'src/**/*.js' --fix",
+    "lint": "eslint 'src/**/*.js' --fix --no-error-on-unmatched-pattern",
     "format": "prettier --write . --loglevel=error",
     "prepare": "husky install",
-    "release": "env-cmd yarn semantic-release"
+    "release": "env-cmd yarn semantic-release",
+    "start": "start-storybook -p 3001"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "env-cmd": "^10.1.0",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
     "husky": "^6.0.0",
     "lint-staged": ">=10",
     "prettier": "^2.3.0",
     "semantic-release": "^17.4.3"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
