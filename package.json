@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint 'src/**/*.js' --fix",
-    "format": "prettier --write . --loglevel=error"
+    "format": "prettier --write . --loglevel=error",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -15,6 +16,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^6.0.0",
+    "lint-staged": ">=10",
     "prettier": "^2.3.0"
   }
 }

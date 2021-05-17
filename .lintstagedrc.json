@@ -1,0 +1,4 @@
+{
+  "src": "yarn format",
+  "*.js": "yarn lint --cache"
+}
