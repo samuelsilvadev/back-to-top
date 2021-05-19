@@ -4,6 +4,7 @@
   "repository": "git@github.com:samuelsilvadev/back-to-top.git",
   "author": "Samuel Silva <samuelsilvawb@gmail.com>",
   "license": "MIT",
+  "main": "dist/back-top-top.js",
   "scripts": {
     "lint": "eslint 'src/**/*.js' --fix --no-error-on-unmatched-pattern",
     "format": "prettier --write . --loglevel=error",
@@ -12,7 +13,8 @@
     "start": "start-storybook -p 3001",
     "test": "jest --no-coverage",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "build": "webpack --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -24,6 +26,8 @@
     "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
     "env-cmd": "^10.1.0",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
@@ -36,7 +40,10 @@
     "prettier": "^2.3.0",
     "prop-types": "^15.7.2",
     "semantic-release": "^17.4.3",
-    "storybook-css-modules-preset": "^1.1.1"
+    "storybook-css-modules-preset": "^1.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   },
   "dependencies": {
     "react": "^17.0.2",
