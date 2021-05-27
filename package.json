@@ -1,10 +1,13 @@
 {
-  "name": "back-to-top",
+  "name": "@small-components/back-to-top",
   "version": "0.2.0",
   "repository": "git@github.com:samuelsilvadev/back-to-top.git",
   "author": "Samuel Silva <samuelsilvawb@gmail.com>",
   "license": "MIT",
   "main": "dist/back-top-top.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint 'src/**/*.js' --fix --no-error-on-unmatched-pattern",
     "format": "prettier --write . --loglevel=error",
@@ -49,6 +52,6 @@
     "webpack-cli": "^4.7.0"
   },
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "16.x"
   }
 }
