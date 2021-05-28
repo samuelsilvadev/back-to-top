@@ -1,14 +1,17 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/BackToTop.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "back-to-top.js",
+    filename: "index.js",
     library: {
       name: "backToTop",
       type: "umd",
     },
+    globalObject: "this",
   },
   module: {
     rules: [
@@ -19,7 +22,9 @@ module.exports = {
       {
         test: /\.css/,
         use: [
-          "style-loader",
+          process.env.NODE_ENV === "production"
+            ? MiniCssExtractPlugin.loader
+            : "style-loader",
           {
             loader: "css-loader",
             options: {
@@ -38,4 +43,5 @@ module.exports = {
       amd: "react",
     },
   },
+  plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin()],
 };
